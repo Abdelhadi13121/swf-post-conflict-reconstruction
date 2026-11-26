@@ -1,0 +1,39 @@
+
+\begingroup
+\centering
+\begin{tabular}{lccccc}
+   \tabularnewline \midrule \midrule
+   Dependent Variable: & \multicolumn{5}{c}{flow\_off}\\
+   Model:                     & (1)            & (2)           & (3)            & (4)            & (5)\\  
+   \midrule
+   \emph{Variables}\\
+   agree\_l1                  & 1.923          & -0.1057       & 1.881          & 2.041          &   \\   
+                              & (1.564)        & (0.9878)      & (1.524)        & (1.589)        &   \\   
+   log\_dist                  & -2.990$^{***}$ &               & -2.954$^{***}$ & -3.032$^{***}$ & -2.881$^{***}$\\   
+                              & (0.4407)       &               & (0.4666)       & (0.4431)       & (0.3965)\\   
+   arab\_common               & 0.6434         & 1.169$^{***}$ & 0.5838         & 0.6902$^{*}$   & 0.7138$^{*}$\\   
+                              & (0.4295)       & (0.4160)      & (0.4828)       & (0.4189)       & (0.4134)\\   
+   agree\_l1 $\times$ gulf    &                &               & 0.8636         &                &   \\   
+                              &                &               & (3.484)        &                &   \\   
+   agree\_l1 $\times$ qatar   &                &               &                & -9.054$^{***}$ &   \\   
+                              &                &               &                & (2.055)        &   \\   
+   ipd\_l1                    &                &               &                &                & 0.7378\\   
+                              &                &               &                &                & (1.084)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   donor-year                 & Yes            & Yes           & Yes            & Yes            & Yes\\  
+   recipient-year             & Yes            & Yes           & Yes            & Yes            & Yes\\  
+   pair                       &                & Yes           &                &                & \\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations               & 595            & 595           & 595            & 595            & 595\\  
+   Squared Correlation        & 0.89850        & 0.97776       & 0.89945        & 0.89949        & 0.90003\\  
+   Pseudo R$^2$               & 0.88304        & 0.94925       & 0.88310        & 0.88516        & 0.88238\\  
+   BIC                        & 20,969.4       & 10,057.3      & 20,965.5       & 20,614.2       & 21,082.3\\  
+   \midrule \midrule
+   \multicolumn{6}{l}{\emph{Clustered (pair) standard-errors in parentheses}}\\
+   \multicolumn{6}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+\par\endgroup
+
+

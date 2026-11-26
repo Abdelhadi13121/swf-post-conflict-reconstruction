@@ -1,0 +1,41 @@
+                                 m1               m2                 m3
+Dependent Var.:            flow_off         flow_off           flow_off
+                                                                       
+agree_l1              1.923 (1.564) -0.1057 (0.9878)      1.881 (1.524)
+log_dist         -2.990*** (0.4407)                  -2.954*** (0.4666)
+arab_common         0.6434 (0.4295) 1.169** (0.4160)    0.5838 (0.4828)
+agree_l1 x gulf                                          0.8636 (3.484)
+agree_l1 x qatar                                                       
+ipd_l1                                                                 
+Fixed-Effects:   ------------------ ---------------- ------------------
+donor-year                      Yes              Yes                Yes
+recipient-year                  Yes              Yes                Yes
+pair                             No              Yes                 No
+________________ __________________ ________________ __________________
+S.E.: Clustered            by: pair         by: pair           by: pair
+Observations                    595              595                595
+Squared Cor.                0.89850          0.97776            0.89945
+Pseudo R2                   0.88304          0.94925            0.88310
+BIC                        20,969.4         10,057.3           20,965.5
+
+                                 m4                 m5
+Dependent Var.:            flow_off           flow_off
+                                                      
+agree_l1              2.041 (1.589)                   
+log_dist         -3.032*** (0.4431) -2.881*** (0.3965)
+arab_common        0.6902. (0.4189)   0.7138. (0.4134)
+agree_l1 x gulf                                       
+agree_l1 x qatar  -9.054*** (2.055)                   
+ipd_l1                                  0.7378 (1.084)
+Fixed-Effects:   ------------------ ------------------
+donor-year                      Yes                Yes
+recipient-year                  Yes                Yes
+pair                             No                 No
+________________ __________________ __________________
+S.E.: Clustered            by: pair           by: pair
+Observations                    595                595
+Squared Cor.                0.89949            0.90003
+Pseudo R2                   0.88516            0.88238
+BIC                        20,614.2           21,082.3
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1

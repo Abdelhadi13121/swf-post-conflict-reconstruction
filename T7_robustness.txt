@@ -1,0 +1,49 @@
+                   r1_all_channels       r2_paid_only     r3_single_dest
+Dependent Var.:           flow_all          flow_paid       flow_off_sgl
+                                                                        
+agree_l1             1.900 (1.550)     3.904* (1.875)      1.707 (1.551)
+log_dist        -2.834*** (0.4419) -3.101*** (0.4100) -2.990*** (0.4255)
+arab_common        0.6270 (0.4555)    0.4092 (0.3702)    0.6705 (0.4158)
+Fixed-Effects:  ------------------ ------------------ ------------------
+donor-year                     Yes                Yes                Yes
+recipient-year                 Yes                Yes                Yes
+_______________ __________________ __________________ __________________
+S.E.: Clustered           by: pair           by: pair           by: pair
+Observations                   595                595                595
+Squared Cor.               0.89103            0.92328            0.90234
+Pseudo R2                  0.87346            0.87209            0.88556
+BIC                       22,438.8           16,872.2           20,331.4
+
+                         r4_no_afg        r5_no_covid       r6_gulf_only
+Dependent Var.:           flow_off           flow_off           flow_off
+                                                                        
+agree_l1             1.007 (1.650)     3.962* (1.910)    -11.67* (5.194)
+log_dist        -3.064*** (0.4679) -3.026*** (0.4694) -4.093*** (0.7231)
+arab_common        0.3823 (0.4776)    0.6506 (0.4511)                   
+Fixed-Effects:  ------------------ ------------------ ------------------
+donor-year                     Yes                Yes                Yes
+recipient-year                 Yes                Yes                Yes
+_______________ __________________ __________________ __________________
+S.E.: Clustered           by: pair           by: pair           by: pair
+Observations                   510                483                280
+Squared Cor.               0.90800            0.89791            0.99323
+Pseudo R2                  0.88709            0.88112            0.94227
+BIC                       18,080.7           17,132.4            4,702.0
+
+                      r7_twoway_cl
+Dependent Var.:           flow_off
+                                  
+agree_l1             1.923 (1.480)
+log_dist        -2.990*** (0.6025)
+arab_common        0.6434 (0.4651)
+Fixed-Effects:  ------------------
+donor-year                     Yes
+recipient-year                 Yes
+_______________ __________________
+S.E.: Clustered  by: donor & reci.
+Observations                   595
+Squared Cor.               0.89850
+Pseudo R2                  0.88304
+BIC                       20,969.4
+---
+Signif. codes: 0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1

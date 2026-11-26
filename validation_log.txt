@@ -1,0 +1,305 @@
+Run: 2026-11-26 19:10:00 
+
+== 02: building the panel == 
+
+### FTS snapshot completeness (flow counts vs FTS-reported counts) 
+   recipient_years all_complete median_usd_ratio
+1:              96         TRUE            1.003
+
+### Flow status values 
+       status     N
+1:       paid 50239
+2: commitment 23623
+3:     pledge   222
+
+### Boundary values 
+   boundary     N
+1: incoming 60185
+2: internal 12919
+3: outgoing   980
+
+### Flow type values 
+      flow_type     N
+1:     Standard 62005
+2:    Carryover   947
+3:       Parked  7186
+4: Pass through  3946
+
+### Filter audit (flows, USD bn) 
+                                         step     n   usd_bn
+1:                           all flows parsed 74084 160.6010
+2:                       boundary == incoming 60185 144.7651
+3:   status paid/commitment (pledges dropped) 59992 143.3550
+4:    flowType Standard (carry-overs dropped) 51559 129.8385
+5: newMoney (no pass-through double counting) 47956 125.4730
+6:                        positive USD amount 47885 125.4730
+7:  dedup multi-year flows (first usage year) 47643 123.5608
+
+### Top 30 UNMAPPED source locations (check no sample donor is missing) 
+                           src_loc   usd_m
+ 1:                           <NA> 14685.0
+ 2:                          Japan  3783.0
+ 3:                         Canada  2985.1
+ 4:                         Sweden  2575.5
+ 5:                    Switzerland  1745.8
+ 6:                        Denmark  1659.2
+ 7:                         France  1468.6
+ 8:                    Netherlands  1398.2
+ 9:                          Italy  1025.4
+10:                      Australia   825.1
+11:                        Belgium   595.1
+12:             Korea, Republic of   546.6
+13:                        Ireland   491.3
+14:                        Finland   408.9
+15:                        Somalia   350.0
+16:                          Spain   276.7
+17:                        Austria   256.4
+18:                     Luxembourg   160.3
+19:             Russian Federation   135.5
+20:                    New Zealand   108.9
+21:                          China    73.7
+22:                         Poland    56.7
+23:                    Afghanistan    37.1
+24:                        Iceland    35.4
+25: Occupied Palestinian Territory    34.6
+26:                 Czech Republic    29.0
+27:                       Portugal    26.9
+28:                         Brazil    20.4
+29:           Syrian Arab Republic    19.9
+30:                          Yemen    18.8
+                           src_loc   usd_m
+
+### Mapped donors: totals and flags 
+   donor    n   usd_m official_share shared_dest_share
+1:   USA 5659 35345.2          0.998             0.008
+2:   DEU 2820 13974.3          0.997             0.021
+3:   SAU 2117 12331.1          0.995             0.003
+4:   GBR 1737  8612.9          0.997             0.003
+5:   ARE 1315  8315.3          0.973             0.004
+6:   QAT 1434  3834.6          0.674             0.002
+7:   NOR 1863  2498.3          0.996             0.025
+8:   KWT 2370  1365.8          0.315             0.007
+9:   TUR  123  1207.0          1.000             0.016
+
+### Largest NON-official sources by donor country (private, charities) 
+    donor                                                        src_org usd_m
+ 1:   QAT                                                  Qatar Charity 526.7
+ 2:   ARE               Red Crescent Society of the United Arab Emirates 224.8
+ 3:   KWT                       Sheikh Abdullah Al-Nouri Charity Society  63.8
+ 4:   QAT                                     Qatar Red Crescent Society  43.7
+ 5:   QAT Sheikh Thani Bin Abdullah Foundation for Humanitarian Services  41.2
+ 6:   KWT                                      Kuwait Society for Relief  25.7
+ 7:   KWT     Al-Salam Association for humanitarian and charitable works  18.5
+ 8:   KWT                                                     Direct Aid  16.9
+ 9:   SAU                                                                 15.5
+10:   GBR                                  Disasters Emergency Committee  13.3
+11:   KWT                                                                 11.6
+12:   KWT                          Namaa Charity - Social Reform Society   8.5
+13:   KWT                                    Kuwait Red Crescent Society   5.8
+14:   KWT                                     Balad Al-Khair Association   4.4
+15:   KWT                                     Kuwaiti Society for Relief   1.7
+16:   USA                                       African Development Bank   1.5
+17:   KWT                                   Patients Helping Fund Kuwait   1.5
+18:   DEU                              UNICEF National Committee/Germany   1.4
+19:   NOR                          Private (individuals & organizations)   1.3
+20:   KWT                                    Al Najat Charitable Society   1.2
+21:   GBR                                                                  1.1
+22:   DEU                          Private (individuals & organizations)   1.1
+23:   KWT                                      Ayatt Charity Association   1.1
+24:   QAT                          Private (individuals & organizations)   1.0
+25:   KWT                             Qawafil for Relief and Development   1.0
+    donor                                                        src_org usd_m
+
+### Top 5 source countries per recipient, 2014-2025 (sanity check) 
+    recipient              src_loc usd_m
+ 1:       AFG        United States  3811
+ 2:       AFG                 <NA>  2659
+ 3:       AFG       United Kingdom  1476
+ 4:       AFG              Germany  1271
+ 5:       AFG                Japan   672
+ 6:       IRQ        United States  3773
+ 7:       IRQ              Germany  2471
+ 8:       IRQ                 <NA>  1457
+ 9:       IRQ                Japan   607
+10:       IRQ         Saudi Arabia   517
+11:       LBY                 <NA>   360
+12:       LBY        United States   239
+13:       LBY              Germany   164
+14:       LBY                Italy   140
+15:       LBY          Switzerland    45
+16:       PSE United Arab Emirates  3025
+17:       PSE        United States  2549
+18:       PSE                Qatar  1730
+19:       PSE                 <NA>  1607
+20:       PSE              Germany  1356
+21:       SDN        United States  5126
+22:       SDN                 <NA>  1503
+23:       SDN       United Kingdom   881
+24:       SDN              Germany   703
+25:       SDN         Saudi Arabia   352
+26:       SOM        United States  5295
+27:       SOM                 <NA>  1480
+28:       SOM       United Kingdom  1117
+29:       SOM              Germany  1114
+30:       SOM              Somalia   350
+31:       SYR        United States  8140
+32:       SYR              Germany  4984
+33:       SYR                 <NA>  3243
+34:       SYR       United Kingdom  2276
+35:       SYR                Qatar  1348
+36:       YEM         Saudi Arabia  9458
+37:       YEM        United States  6411
+38:       YEM United Arab Emirates  4184
+39:       YEM                 <NA>  2390
+40:       YEM       United Kingdom  1982
+    recipient              src_loc usd_m
+
+### UNGA alignment coverage by donor 
+   donor     years   n mean_agree
+1:   USA 1946-2024 447      0.347
+2:   GBR 1946-2024 447      0.521
+3:   DEU 1990-2024 226      0.643
+4:   NOR 1946-2024 447      0.654
+5:   TUR 1946-2024 447      0.735
+6:   SAU 1946-2024 447      0.927
+7:   KWT 1963-2024 382      0.946
+8:   QAT 1971-2024 340      0.951
+9:   ARE 1971-2024 340      0.951
+
+### Estimation panel summary 
+   obs zero_share miss_align
+1: 630        0.2          0
+
+== Step 7: descriptives == 
+
+### Donor portfolio concentration 2014-2024 
+   donor total_usd_m top_recipient top_share   hhi arab_recipient_share
+1:   USA     33983.1           SYR     0.236 0.162                0.895
+2:   DEU     13589.1           SYR     0.359 0.206                0.908
+3:   SAU     10861.4           YEM     0.785 0.628                0.993
+4:   GBR      7896.2           SYR     0.272 0.188                0.829
+5:   ARE      6414.3           YEM     0.652 0.479                0.992
+6:   NOR      2306.9           SYR     0.439 0.244                0.899
+7:   QAT      1936.4           PSE     0.628 0.428                0.982
+8:   KWT      1157.2           YEM     0.403 0.305                0.993
+9:   TUR       819.7           SYR     0.710 0.555                0.994
+
+### Official vs all channels by donor country 
+   donor official all_sources nonofficial_share
+1:   USA  33983.1     33986.2             0.000
+2:   DEU  13589.1     13591.6             0.000
+3:   SAU  10861.4     10877.0             0.001
+4:   GBR   7896.2      7911.5             0.002
+5:   ARE   6414.3      6641.0             0.034
+6:   QAT   1936.4      2395.1             0.192
+7:   NOR   2306.9      2308.9             0.001
+8:   KWT   1157.2      1294.9             0.106
+9:   TUR    819.7       819.7             0.000
+
+== Step 8: estimation == 
+Estimation sample: 630 obs, 63 pairs, years 2015-2024 
+
+### Leave-one-recipient-out (agree_l1) 
+   dropped         b       se          p
+1:     AFG 1.0071840 1.650091 0.54160958
+2:     IRQ 1.3150473 1.315500 0.31747710
+3:     LBY 2.1526319 1.610134 0.18124634
+4:     SDN 0.9167537 1.608868 0.56880460
+5:     SOM 6.6537314 2.731727 0.01486205
+6:     SYR 1.9551097 1.782201 0.27263268
+7:     YEM 3.2777035 1.323689 0.01327933
+
+### Main models 
+    model           term   estimate        se            p nobs pseudo_r2
+ 1:    m1       agree_l1  1.9233540 1.5637542 2.187123e-01  595 0.8830413
+ 2:    m1       log_dist -2.9900233 0.4407082 1.164190e-11  595 0.8830413
+ 3:    m1    arab_common  0.6433819 0.4294513 1.340946e-01  595 0.8830413
+ 4:    m2       agree_l1 -0.1057113 0.9877999 9.147755e-01  595 0.9492450
+ 5:    m2    arab_common  1.1694351 0.4159642 4.932888e-03  595 0.9492450
+ 6:    m3       agree_l1  1.8808898 1.5240708 2.171573e-01  595 0.8831018
+ 7:    m3       log_dist -2.9538317 0.4666086 2.444837e-10  595 0.8831018
+ 8:    m3    arab_common  0.5838352 0.4828045 2.265637e-01  595 0.8831018
+ 9:    m3  agree_l1:gulf  0.8636241 3.4843322 8.042433e-01  595 0.8831018
+10:    m4       agree_l1  2.0405206 1.5893801 1.991956e-01  595 0.8851598
+11:    m4       log_dist -3.0319877 0.4430651 7.743784e-12  595 0.8851598
+12:    m4    arab_common  0.6902449 0.4188860 9.939150e-02  595 0.8851598
+13:    m4 agree_l1:qatar -9.0542580 2.0553553 1.056847e-05  595 0.8851598
+14:    m5         ipd_l1  0.7377911 1.0840420 4.961293e-01  595 0.8823801
+15:    m5       log_dist -2.8810385 0.3964628 3.679492e-13  595 0.8823801
+16:    m5    arab_common  0.7138232 0.4134430 8.425147e-02  595 0.8823801
+
+### Robustness 
+              model        term    estimate        se            p nobs
+ 1: r1_all_channels    agree_l1   1.8996713 1.5495312 2.202118e-01  595
+ 2: r1_all_channels    log_dist  -2.8339097 0.4418532 1.420379e-10  595
+ 3: r1_all_channels arab_common   0.6270285 0.4555070 1.686512e-01  595
+ 4:    r2_paid_only    agree_l1   3.9041804 1.8748640 3.730772e-02  595
+ 5:    r2_paid_only    log_dist  -3.1006692 0.4100028 3.952253e-14  595
+ 6:    r2_paid_only arab_common   0.4091821 0.3701900 2.690166e-01  595
+ 7:  r3_single_dest    agree_l1   1.7065655 1.5514485 2.713399e-01  595
+ 8:  r3_single_dest    log_dist  -2.9898872 0.4254806 2.108969e-12  595
+ 9:  r3_single_dest arab_common   0.6705308 0.4158491 1.068667e-01  595
+10:       r4_no_afg    agree_l1   1.0071840 1.6500912 5.416096e-01  510
+11:       r4_no_afg    log_dist  -3.0636906 0.4679104 5.846864e-11  510
+12:       r4_no_afg arab_common   0.3822736 0.4775727 4.234495e-01  510
+13:     r5_no_covid    agree_l1   3.9622232 1.9097557 3.801177e-02  483
+14:     r5_no_covid    log_dist  -3.0256076 0.4694061 1.151382e-10  483
+15:     r5_no_covid arab_common   0.6506054 0.4511313 1.492561e-01  483
+16:    r6_gulf_only    agree_l1 -11.6691757 5.1939070 2.465890e-02  280
+17:    r6_gulf_only    log_dist  -4.0930156 0.7230615 1.507791e-08  280
+18:    r7_twoway_cl    agree_l1   1.9233540 1.4803853 1.938666e-01  595
+19:    r7_twoway_cl    log_dist  -2.9900233 0.6025150 6.956623e-07  595
+20:    r7_twoway_cl arab_common   0.6433819 0.4650795 1.665482e-01  595
+    pseudo_r2
+ 1: 0.8734617
+ 2: 0.8734617
+ 3: 0.8734617
+ 4: 0.8720949
+ 5: 0.8720949
+ 6: 0.8720949
+ 7: 0.8855597
+ 8: 0.8855597
+ 9: 0.8855597
+10: 0.8870854
+11: 0.8870854
+12: 0.8870854
+13: 0.8811233
+14: 0.8811233
+15: 0.8811233
+16: 0.9422698
+17: 0.9422698
+18: 0.8830413
+19: 0.8830413
+20: 0.8830413
+Magnitude: +0.10 agreement -> 21.2% official funding 
+
+== Step 8b: Syria 2025 event == 
+
+### Syria 2025 event estimates and placebos 
+                treated recipient   outcome year      b      p ratio
+ 1:                 QAT       SYR  flow_off 2025   4.33 0.0000  75.7
+ 2:         QAT+SAU+TUR       SYR  flow_off 2025   2.69 0.0029  14.7
+ 3: QAT+SAU+TUR+ARE+KWT       SYR  flow_off 2025   2.40 0.0037  11.0
+ 4:                 QAT       SYR flow_paid 2025   2.51 0.0000  12.2
+ 5:                 QAT       SYR  flow_all 2025   3.49 0.0000  32.8
+ 6:                 QAT       SYR  flow_off 2023  -1.14 0.0016   0.3
+ 7:                 QAT       SYR  flow_off 2024   0.73 0.2252   2.1
+ 8:                 QAT       IRQ  flow_off 2025   2.00 0.1204   7.4
+ 9:                 QAT       LBY  flow_off 2025  -2.69 0.0403   0.1
+10:                 QAT       YEM  flow_off 2025  -2.07 0.1200   0.1
+11:                 QAT       PSE  flow_off 2025  -3.92 0.0000   0.0
+12:                 QAT       AFG  flow_off 2025   0.91 0.5275   2.5
+13:                 QAT       SDN  flow_off 2025  -0.29 0.8230   0.7
+14:                 QAT       SOM  flow_off 2025   0.68 0.6322   2.0
+15:                 SAU       SYR  flow_off 2025  -0.01 0.9922   1.0
+16:                 ARE       SYR  flow_off 2025 -14.22 0.0000   0.0
+17:                 KWT       SYR  flow_off 2025  -0.87 0.3206   0.4
+18:                 TUR       SYR  flow_off 2025   1.00 0.1436   2.7
+19:                 NOR       SYR  flow_off 2025  -1.64 0.0043   0.2
+20:                 DEU       SYR  flow_off 2025  -0.68 0.3723   0.5
+21:                 GBR       SYR  flow_off 2025  -0.92 0.1269   0.4
+22:                 USA       SYR  flow_off 2025  -2.00 0.0015   0.1
+                treated recipient   outcome year      b      p ratio
+Paper figures written to output/figures/ 
+
+DONE. Tables in output/tables, figures in output/figures, log in output/logs. 
